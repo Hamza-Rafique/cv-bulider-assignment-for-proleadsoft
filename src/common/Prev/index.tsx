@@ -7,7 +7,7 @@ const Prev: React.FC<Props> = ({ handlePrevStep }) => {
   return (
     <button
       onClick={handlePrevStep}
-      className="bg-white text-black px-4 py-2 rounded-md"
+      className="bg-gray-500 text-white px-4 py-2 rounded-md"
     >
       GoBack
     </button>
