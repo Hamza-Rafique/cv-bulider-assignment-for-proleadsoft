@@ -5,14 +5,14 @@ interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;
 }
-const Achievements: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
+const Description: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
   return (
     <div>
-      Achievements
+      Description
       <Next onNextStep={onNextStep} />
       <Prev handlePrevStep={handlePrevStep} />
     </div>
   );
 };
 
-export default Achievements;
+export default Description;

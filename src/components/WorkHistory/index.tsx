@@ -1,11 +1,18 @@
-import React from 'react'
-
-const WorkHistory = () => {
+import React from "react";
+import Next from "../../common/Next";
+import Prev from "../../common/Prev";
+interface Props {
+  onNextStep: () => void;
+  handlePrevStep: () => void;
+}
+const WorkHistory: React.FC<Props> = ({ onNextStep, handlePrevStep }) => {
   return (
     <div>
-      Work History
+      WorkHistory:
+      <Next onNextStep={onNextStep} />
+      <Prev handlePrevStep={handlePrevStep} />
     </div>
-  )
-}
+  );
+};
 
-export default WorkHistory
+export default WorkHistory;

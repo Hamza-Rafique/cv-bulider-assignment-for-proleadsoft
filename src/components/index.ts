@@ -1,17 +1,19 @@
 import Achievements from "./Achievements";
 import Education from "./Education";
-import GetInTouch from "./GetInTouch";
+import Description from "./Description";
 import Intro from "./Intro";
 import WorkHistory from "./WorkHistory";
 import Skills from "./Skills";
 import Tools from "./Tools";
 import Languages from "./Languages";
+import Stepper from "./Stepper";
 
 export {
+  Stepper,
   WorkHistory,
   Education,
   Achievements,
-  GetInTouch,
+  Description,
   Intro,
   Skills,
   Tools,
