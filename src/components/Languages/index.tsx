@@ -9,8 +9,10 @@ const Languages: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
   return (
     <div>
       Language
-      <Next onNextStep={onNextStep} />
-      <Prev handlePrevStep={handlePrevStep} />
+      <div className="flex justify-between px-2 mb-4">
+        <Prev handlePrevStep={handlePrevStep} />
+        <Next onNextStep={onNextStep} />
+      </div>
     </div>
   );
 };

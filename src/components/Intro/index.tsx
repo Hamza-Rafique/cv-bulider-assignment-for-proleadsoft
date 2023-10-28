@@ -7,8 +7,17 @@ interface Props {
 }
 
 const Intro: React.FC<Props> = ({ onNextStep, handlePrevStep, formik }) => {
+  
+  const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    e.preventDefault();
+
+    formik.handleSubmit();
+    if (formik.isValid && formik.dirty) {
+      onNextStep();
+    }
+  };
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <>
       <div className="flex justify-between px-2 mb-4">
         <InputField
           label="First Name"
@@ -85,9 +94,9 @@ const Intro: React.FC<Props> = ({ onNextStep, handlePrevStep, formik }) => {
       </div>
       <div className="flex justify-between px-2 mb-4">
         <Prev handlePrevStep={handlePrevStep} />
-        <Next onNextStep={onNextStep} />
+        <Next onNextStep={handleNextClick} />
       </div>
-    </form>
+    </>
   );
 };
 
