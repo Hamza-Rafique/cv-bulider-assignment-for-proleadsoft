@@ -1,16 +1,12 @@
 import React from "react";
 interface Props {
-  onNextStep: () => void;
+  onNextStep:any;
 }
 
 const Next: React.FC<Props> = ({ onNextStep }) => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    onNextStep();
-  };
   return (
     <button
-      onClick={handleClick}
+      onClick={onNextStep}
       className="bg-blue-500 text-white px-4 py-2 rounded-md"
       type="submit"
     >

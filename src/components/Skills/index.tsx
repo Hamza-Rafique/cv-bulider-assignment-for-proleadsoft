@@ -9,8 +9,10 @@ const Skills: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
   return (
     <div>
       Skills
-      <Next onNextStep={onNextStep} />
-      <Prev handlePrevStep={handlePrevStep} />
+      <div className="flex justify-between px-2 mb-4">
+        <Prev handlePrevStep={handlePrevStep} />
+        <Next onNextStep={onNextStep} />
+      </div>
     </div>
   );
 };

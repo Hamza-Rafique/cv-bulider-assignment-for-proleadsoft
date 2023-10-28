@@ -5,12 +5,14 @@ interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;
 }
-const Achievements: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
+const Achievements: React.FC<Props> = ({ onNextStep, handlePrevStep }) => {
   return (
     <div>
       Achievements
-      <Next onNextStep={onNextStep} />
-      <Prev handlePrevStep={handlePrevStep} />
+      <div className="flex justify-between px-2 mb-4">
+        <Prev handlePrevStep={handlePrevStep} />
+        <Next onNextStep={onNextStep} />
+      </div>
     </div>
   );
 };
