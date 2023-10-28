@@ -2,10 +2,11 @@ import React from "react";
 import Next from "../../common/Next";
 import Prev from "../../common/Prev";
 import EducationEntry from "../EducationFiled";
+import { MyFormData } from "../../utlits/types";
 interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;
-  formik: any;
+  formik: MyFormData;
 }
 
 const Education: React.FC<Props> = ({ onNextStep, handlePrevStep, formik }) => {
