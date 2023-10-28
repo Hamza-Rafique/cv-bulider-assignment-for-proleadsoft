@@ -1,12 +1,14 @@
 import { InputField, Next, Prev } from "../../common";
+import { MyFormData } from "../../utlits/types";
 
 interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;
-  formik: any;
+  formik: MyFormData;
 }
 
 const Intro: React.FC<Props> = ({ onNextStep, handlePrevStep, formik }) => {
+  console.log(typeof(formik))
   
   const handleNextClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
     e.preventDefault();

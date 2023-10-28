@@ -1,29 +1,37 @@
-import React from 'react';
-import PersonalInfo from './components/PersonalInfo';
+import React from "react";
+import {
+  CVSection,
+  DescriptionLinks,
+  EducationHistory,
+  PersonalInfo,
+  WorkHistory,
+} from "./components";
+interface Props {
+  cvData?: any;
+}
 
-
-const CV: React.FC = ({cvData}:any) => {
+const CV: React.FC<Props> = ({ cvData }) => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">
-        {cvData.firstName} {cvData.lastName}'s CV
+        {cvData?.firstName} {cvData?.lastName}'s CV
       </h1>
 
-      <section title="Personal Information">
+      <CVSection title="Personal Information">
         <PersonalInfo data={cvData} />
-      </section>
+      </CVSection>
 
-      <section title="Education History">
-        {/* Render Education History Component */}
-      </section>
+      <CVSection title="Education History">
+        <EducationHistory data={cvData} />
+      </CVSection>
 
-      <section title="Work History">
-        {/* Render Work History Component */}
-      </section>
+      <CVSection title="Work History">
+        <WorkHistory data={cvData} />
+      </CVSection>
 
-      <section title="Description and Links">
-        {/* Render Description and Links Component */}
-      </section>
+      <CVSection title="Description and Links">
+        <DescriptionLinks data={cvData} />
+      </CVSection>
     </div>
   );
 };

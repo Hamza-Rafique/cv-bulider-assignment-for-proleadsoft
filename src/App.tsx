@@ -10,7 +10,6 @@ import {
   Intro,
   Skills,
   Tools,
-  Languages,
   Stepper,
 } from "./components";
 import Interests from "./components/Interests";
@@ -34,7 +33,7 @@ function App() {
     "Achievements",
     "Tools",
     "Interests",
-    "Language",
+    "Your CV",
   ];
 
   const handleNextStep = () => {
@@ -164,16 +163,13 @@ function App() {
                 />
               )}
               {currentStep === 8 && (
-                <Languages
-                  onNextStep={handleNextStep}
-                  handlePrevStep={handlePrevStep}
-                />
+               <CV cvData={cvData}/>
               )}
             </div>
           </Form>
         )}
       </Formik>
-      {/* <CV cvData={cvData}/> */}
+
     </div>
   );
 }
