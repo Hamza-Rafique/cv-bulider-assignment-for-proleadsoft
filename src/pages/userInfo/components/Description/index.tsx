@@ -1,6 +1,6 @@
 import React from "react";
-import { InputField, Next, Prev, TextArea } from "../../common";
-import { MyFormData } from "../../utlits/types";
+import { InputField, Next, Prev, TextArea } from "../../../../common";
+import { MyFormData } from "../../../../utlits/types";
 
 interface Props {
   onNextStep: () => void;

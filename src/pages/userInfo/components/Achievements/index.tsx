@@ -1,14 +1,14 @@
 import React from "react";
-import Next from "../../common/Next";
-import Prev from "../../common/Prev";
+import Next from "../../../../common/Next";
+import Prev from "../../../../common/Prev";
 interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;
 }
-const Skills: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
+const Achievements: React.FC<Props> = ({ onNextStep, handlePrevStep }) => {
   return (
     <div>
-      Skills
+      Achievements
       <div className="flex justify-between px-2 mb-4">
         <Prev handlePrevStep={handlePrevStep} />
         <Next onNextStep={onNextStep} />
@@ -17,4 +17,4 @@ const Skills: React.FC<Props> = ({ onNextStep,handlePrevStep }) => {
   );
 };
 
-export default Skills;
+export default Achievements;

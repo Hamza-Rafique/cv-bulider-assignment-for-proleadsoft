@@ -1,7 +1,7 @@
 import React from "react";
-import { Next, Prev } from "../../common";
+import { Next, Prev } from "../../../../common";
 import WorkFileds from "../WorkFiled";
-import { MyFormData } from "../../utlits/types";
+import { MyFormData } from "../../../../utlits/types";
 interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;

@@ -1,8 +1,8 @@
 import React from "react";
-import Next from "../../common/Next";
-import Prev from "../../common/Prev";
+import Next from "../../../../common/Next";
+import Prev from "../../../../common/Prev";
 import EducationEntry from "../EducationFiled";
-import { MyFormData } from "../../utlits/types";
+import { MyFormData } from "../../../../utlits/types";
 interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;

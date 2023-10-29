@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import {
   CVSection,
   DescriptionLinks,
@@ -6,11 +7,13 @@ import {
   PersonalInfo,
   WorkHistory,
 } from "./components";
-interface Props {
-  cvData?: any;
-}
+import { selectFormData } from "../../slices/formSlice";
 
-const CV: React.FC<Props> = ({ cvData }) => {
+const CV = () => {
+  const cvData= useSelector(selectFormData);
+
+  console.log(cvData)
+  
   return (
     <>
       {cvData && (

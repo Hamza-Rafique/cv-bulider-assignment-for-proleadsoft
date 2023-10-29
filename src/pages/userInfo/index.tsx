@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { setFormData } from "../../slices/formSlice";
 import {
   Achievements,
   Description,
@@ -10,8 +12,8 @@ import {
   Stepper,
   Tools,
   WorkHistory,
-} from "../../components";
-import Interests from "../../components/Interests";
+} from "./components";
+import Interests from "./components/Interests";
 import {
   descriptionSchema,
   educationSchema,
@@ -20,7 +22,11 @@ import {
 
 const UserInfo = () => {
   const [currentStep, setCurrentStep] = useState(0);
-
+  const dispatch = useDispatch();
+  const onSubmit = (values: any) => {
+    console.log(values);
+    dispatch(setFormData(values));
+  };
   const steps = [
     "Introduction",
     "Description",
@@ -95,9 +101,7 @@ const UserInfo = () => {
           ],
         }}
         validationSchema={validationSchema}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
+        onSubmit={onSubmit}
       >
         {(formik) => (
           <Form>
