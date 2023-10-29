@@ -1,5 +1,5 @@
-import { InputField, Next, Prev } from "../../common";
-import { MyFormData } from "../../utlits/types";
+import { InputField, Next, Prev } from "../../../../common";
+import { MyFormData } from "../../../../utlits/types";
 
 interface Props {
   onNextStep: () => void;

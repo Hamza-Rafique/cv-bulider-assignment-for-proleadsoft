@@ -1,16 +1,16 @@
 import React from "react";
-import { InputField, TextArea } from "../../common";
+import { InputField } from "../../../../common";
 
-const WorkFileds = ({ formik, index, removeEntry }: any) => {
+const EducationEntry = ({ formik, index, removeEntry }: any) => {
   return (
     <div key={index}>
       <div className="flex px-2 mb-4">
         <InputField
-          label="Company Name"
+          label="Institution"
           type="text"
-          placeholder="Company"
-          name={`workHistory[${index}].company`}
-          value={formik.values.workHistory[index].company}
+          placeholder="Institution"
+          name={`educationHistory[${index}].institution`}
+          value={formik.values.educationHistory[index].institution}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
@@ -24,20 +24,21 @@ const WorkFileds = ({ formik, index, removeEntry }: any) => {
       </div>
       <div className="flex justify-between px-2 mb-4">
         <InputField
-          label="Position"
+          label="Degree"
           type="text"
-          placeholder="Position"
-          name={`workHistory[${index}].position`}
-          value={formik.values.workHistory[index].position}
+          placeholder="Degree"
+          name={`educationHistory[${index}].degree`}
+          value={formik.values.educationHistory[index].degree}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
 
-        <TextArea
-          label="Define your role and resposbiltes"
-          placeholder="role"
-          name={`workHistory[${index}].role`}
-          value={formik.values.workHistory[index].role}
+        <InputField
+          label="Field of Study"
+          type="text"
+          placeholder="Field of Study"
+          name={`educationHistory[${index}].fieldOfStudy`}
+          value={formik.values.educationHistory[index].fieldOfStudy}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
@@ -47,8 +48,8 @@ const WorkFileds = ({ formik, index, removeEntry }: any) => {
           label="Start Date"
           type="date"
           placeholder="Start Date"
-          name={`workHistory[${index}].startDate`}
-          value={formik.values.workHistory[index].startDate}
+          name={`educationHistory[${index}].startDate`}
+          value={formik.values.educationHistory[index].startDate}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
@@ -56,8 +57,8 @@ const WorkFileds = ({ formik, index, removeEntry }: any) => {
           label="End Date"
           type="date"
           placeholder="End Date"
-          name={`workHistory[${index}].endDate`}
-          value={formik.values.workHistory[index].endDate}
+          name={`educationHistory[${index}].endDate`}
+          value={formik.values.educationHistory[index].endDate}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
@@ -66,4 +67,4 @@ const WorkFileds = ({ formik, index, removeEntry }: any) => {
   );
 };
 
-export default WorkFileds;
+export default EducationEntry;

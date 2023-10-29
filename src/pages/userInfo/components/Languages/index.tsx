@@ -1,6 +1,6 @@
 import React from "react";
-import Next from "../../common/Next";
-import Prev from "../../common/Prev";
+import Next from "../../../../common/Next";
+import Prev from "../../../../common/Prev";
 interface Props {
   onNextStep: () => void;
   handlePrevStep: () => void;
