@@ -12,25 +12,19 @@ interface Props {
 }
 
 const PersonalInfo: React.FC<Props> = ({ data }) => {
- 
   return (
-    <div className="flex items-center">
-      <div className="mr-4">
-        {data?.profilePic && (
-          <img
-            src={URL.createObjectURL(data?.profilePic)}
-            alt="Profile"
-            className="w-32 h-32 rounded-full"
-          />
-        )}
+    <div className="flex justify-between text-center">
+      <div className="flex items-center justify-center text-center">
+        <button className="bg-blue-500 text-white px-4 py-2 rounded-md animate__animated animate__fadeIn">
+          Get In Touch
+        </button>
+        <p className="ml-8">{data?.phoneNumber}</p>
       </div>
-      <div>
+      <div className="flex flex-col">
         <p>
-          {data?.firstName} {data?.lastName}
+          {data?.firstName} {data?.lastName} Age: {data?.age}
         </p>
-        <p>Age: {data?.age}</p>
         <p>Position: {data?.position}</p>
-        <p>Phone Number: {data?.phoneNumber}</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Props {
   data: { educationHistory: Array<Record<string, string>> };
@@ -6,14 +6,24 @@ interface Props {
 
 const EducationHistory: React.FC<Props> = ({ data }) => {
   return (
-    <div>
+    <div className="bg-white p-4 rounded shadow mb-4">
       {data?.educationHistory.map((edu, index) => (
         <div key={index} className="mb-4">
-          <p>Institution: {edu?.institution}</p>
-          <p>Degree: {edu?.degree}</p>
-          <p>Field of Study: {edu?.fieldOfStudy}</p>
-          <p>Start Date: {edu?.startDate}</p>
-          <p>End Date: {edu?.endDate}</p>
+          <p>
+            <b>Institution:</b> {edu?.institution}
+          </p>
+          <p>
+            <b>Degree:</b> {edu?.degree}
+          </p>
+          <p>
+            <b>Field of Study:</b> {edu?.fieldOfStudy}
+          </p>
+          <p>
+            <b>Start Date:</b> {edu?.startDate}
+          </p>
+          <p>
+            <b>End Date:</b> {edu?.endDate}
+          </p>
         </div>
       ))}
     </div>

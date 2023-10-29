@@ -4,39 +4,26 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { setFormData } from "../../slices/formSlice";
 import {
-  Achievements,
   Description,
   Education,
   Intro,
-  Skills,
   Stepper,
-  Tools,
   WorkHistory,
 } from "./components";
-import Interests from "./components/Interests";
 import {
   descriptionSchema,
   educationSchema,
   introSchema,
 } from "../../utlits/schema";
+import Congrats from "./components/Congtrs";
 
 const UserInfo = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const dispatch = useDispatch();
   const onSubmit = (values: any) => {
-    console.log(values);
     dispatch(setFormData(values));
   };
-  const steps = [
-    "Introduction",
-    "Description",
-    "Education",
-    "Work History",
-    "Skills",
-    "Achievements",
-    "Tools",
-    "Interests",
-  ];
+  const steps = ["Introduction", "Description", "Education", "Work History"];
 
   const handleNextStep = () => {
     setCurrentStep((prevStep) => prevStep + 1);
@@ -67,6 +54,7 @@ const UserInfo = () => {
 
   return (
     <div>
+
       <Stepper
         steps={steps}
         currentStep={currentStep}
@@ -105,6 +93,10 @@ const UserInfo = () => {
       >
         {(formik) => (
           <Form>
+            <h1 className="text-3xl font-bold mb-8 mt-4 mx-auto text-center">
+              Enter Information to Build your CV with Proleadsoft
+            </h1>
+            
             <div className="mt-8">
               {currentStep === 0 && (
                 <Intro
@@ -134,7 +126,10 @@ const UserInfo = () => {
                   formik={formik}
                 />
               )}
-              {currentStep === 4 && (
+              {currentStep === 4 && <Congrats />}
+              {/* ToDo I will implentds if needed */}
+
+              {/* {currentStep === 4 && (
                 <Skills
                   onNextStep={handleNextStep}
                   handlePrevStep={handlePrevStep}
@@ -145,19 +140,19 @@ const UserInfo = () => {
                   onNextStep={handleNextStep}
                   handlePrevStep={handlePrevStep}
                 />
-              )}
-              {currentStep === 6 && (
+              )} */}
+              {/* {currentStep === 6 && (
                 <Tools
                   onNextStep={handleNextStep}
                   handlePrevStep={handlePrevStep}
                 />
-              )}
-              {currentStep === 7 && (
+              )} */}
+              {/* {currentStep === 7 && (
                 <Interests
                   onNextStep={handleNextStep}
                   handlePrevStep={handlePrevStep}
                 />
-              )}
+              )} */}
             </div>
           </Form>
         )}
