@@ -6,7 +6,7 @@ interface Props {
 
 const WorkHistory: React.FC<Props> = ({ data }) => {
   return (
-    <div className="bg-white p-4 rounded shadow mb-4">
+    <div className="bg-white p-4 rounded shadow mb-4 overlay2">
       {data?.workHistory?.map((work, index) => (
         <div key={index} className="mb-4">
           <p>

@@ -57,7 +57,7 @@ const CV = () => {
       </section>
       {cvData && (
         <button
-          className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center"
+          className="bg-blue-600 text-white px-4 py-2 mt-8 rounded-md flex items-center"
           onClick={handleClick}
         >
           Download CV
