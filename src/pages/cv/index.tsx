@@ -15,7 +15,6 @@ const CV = () => {
   const handleClick = () => {
     generatePDF("elementToConvert", "myPDF");
   };
-  console.log(cvData);
 
   return (
     <>
@@ -56,12 +55,15 @@ const CV = () => {
           </div>
         )}
       </section>
-      <button
-        className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center"
-        onClick={handleClick}
-      >
-        Download CV
-      </button>
+      {cvData && (
+        <button
+          className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center"
+          onClick={handleClick}
+        >
+          Download CV
+        </button>
+      )}
+      {!cvData && <p>please enter your information first</p>}
     </>
   );
 };

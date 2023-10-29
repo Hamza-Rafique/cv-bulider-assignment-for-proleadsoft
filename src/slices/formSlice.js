@@ -8,7 +8,6 @@ const formDataSlice = createSlice({
   reducers: {
     setFormData: (state, action) => {
       state.data = action.payload;
-      console.log(state.data)
     },
   },
 });

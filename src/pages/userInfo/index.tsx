@@ -54,7 +54,6 @@ const UserInfo = () => {
 
   return (
     <div>
-
       <Stepper
         steps={steps}
         currentStep={currentStep}
@@ -96,7 +95,7 @@ const UserInfo = () => {
             <h1 className="text-3xl font-bold mb-8 mt-4 mx-auto text-center">
               Enter Information to Build your CV with Proleadsoft
             </h1>
-            
+
             <div className="mt-8">
               {currentStep === 0 && (
                 <Intro
@@ -127,7 +126,7 @@ const UserInfo = () => {
                 />
               )}
               {currentStep === 4 && <Congrats />}
-              {/* ToDo I will implentds if needed */}
+              {/* ToDo I will implements if needed */}
 
               {/* {currentStep === 4 && (
                 <Skills
