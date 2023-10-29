@@ -7,7 +7,7 @@ interface Props {
 const EducationHistory: React.FC<Props> = ({ data }) => {
   return (
     <div>
-      {data?.educationHistory?.map((edu, index) => (
+      {data?.educationHistory.map((edu, index) => (
         <div key={index} className="mb-4">
           <p>Institution: {edu?.institution}</p>
           <p>Degree: {edu?.degree}</p>
