@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cv-bulider-assignment-for-proleadsoft/static/css/main.fc01c185.css",
+    "main.js": "/cv-bulider-assignment-for-proleadsoft/static/js/main.13d9c68b.js",
+    "static/js/703.16af480c.chunk.js": "/cv-bulider-assignment-for-proleadsoft/static/js/703.16af480c.chunk.js",
+    "static/js/541.e9a08e21.chunk.js": "/cv-bulider-assignment-for-proleadsoft/static/js/541.e9a08e21.chunk.js",
+    "static/js/787.9a0d9a37.chunk.js": "/cv-bulider-assignment-for-proleadsoft/static/js/787.9a0d9a37.chunk.js",
+    "static/media/background.jpeg": "/cv-bulider-assignment-for-proleadsoft/static/media/background.c7e080f75a46801402b7.jpeg",
+    "index.html": "/cv-bulider-assignment-for-proleadsoft/index.html",
+    "main.fc01c185.css.map": "/cv-bulider-assignment-for-proleadsoft/static/css/main.fc01c185.css.map",
+    "main.13d9c68b.js.map": "/cv-bulider-assignment-for-proleadsoft/static/js/main.13d9c68b.js.map",
+    "703.16af480c.chunk.js.map": "/cv-bulider-assignment-for-proleadsoft/static/js/703.16af480c.chunk.js.map",
+    "541.e9a08e21.chunk.js.map": "/cv-bulider-assignment-for-proleadsoft/static/js/541.e9a08e21.chunk.js.map",
+    "787.9a0d9a37.chunk.js.map": "/cv-bulider-assignment-for-proleadsoft/static/js/787.9a0d9a37.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc01c185.css",
+    "static/js/main.13d9c68b.js"
+  ]
+}
