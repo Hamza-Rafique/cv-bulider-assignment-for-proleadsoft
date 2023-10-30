@@ -1,5 +1,5 @@
-import React from "react";
 import { useSelector } from "react-redux";
+import Draggable from "react-draggable";
 import {
   CVSection,
   DescriptionLinks,
@@ -21,20 +21,22 @@ const CV = () => {
       <section id="elementToConvert">
         {cvData && (
           <div className="container mx-auto p-4">
-            <div className="flex justify-between">
-              <h1 className="text-3xl font-bold mb-4">
-                {cvData?.firstName} {cvData?.lastName} CV
-              </h1>
-              <div className="mr-4">
-                {cvData?.profilePic && (
-                  <img
-                    src={URL.createObjectURL(cvData?.profilePic)}
-                    alt="Profile"
-                    className="w-32 h-32 rounded-full"
-                  />
-                )}
+            <Draggable>
+              <div className="flex justify-between">
+                <h1 className="text-3xl font-bold mb-4">
+                  {cvData?.firstName} {cvData?.lastName} CV
+                </h1>
+                <div className="mr-4">
+                  {cvData?.profilePic && (
+                    <img
+                      src={URL.createObjectURL(cvData?.profilePic)}
+                      alt="Profile"
+                      className="w-32 h-32 rounded-full"
+                    />
+                  )}
+                </div>
               </div>
-            </div>
+            </Draggable>
             <CVSection title="Personal Information">
               <PersonalInfo data={cvData} />
             </CVSection>
@@ -43,7 +45,7 @@ const CV = () => {
             <CVSection title="Description and Links">
               <DescriptionLinks data={cvData} />
             </CVSection>
-            <div className="flex justify-between">
+            <div className="flex justify-between flex-col">
               <CVSection title="Education History">
                 <EducationHistory data={cvData} />
               </CVSection>
