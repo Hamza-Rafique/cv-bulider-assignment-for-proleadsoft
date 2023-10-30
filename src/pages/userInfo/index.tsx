@@ -53,7 +53,7 @@ const UserInfo = () => {
   }, [currentStep, descriptionSchema, educationSchema, introSchema]);
 
   return (
-    <div className="overlay  p-4 rounded shadow mb-4">
+    <div className="overlay p-4 rounded shadow mb-4">
       <Stepper
         steps={steps}
         currentStep={currentStep}
